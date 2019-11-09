@@ -19,7 +19,7 @@ def getFromUrl():
     return extractAudioFromVideo('video.mp4')
 
 def extractAudioFromVideo(filename):
-    save_path = 'results/audio.mp3'
+    save_path = 'audio.mp3'
     if os.path.exists(save_path):
             os.remove(save_path)
     command = "ffmpeg -i "+ filename +" -ab 160k -ac 2 -ar 44100 -vn " + save_path
