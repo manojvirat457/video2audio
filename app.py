@@ -24,7 +24,7 @@ def extractAudioFromVideo(filename):
             os.remove(save_path)
     command = "ffmpeg -i "+ filename +" -ab 160k -ac 2 -ar 44100 -vn " + save_path
     subprocess.call(command, shell=True)
-    return send_file(save_path, attachment_filename='audio.mp3')
+    return send_file(save_path, attachment_filename='audio.mp3',mimetype='audio/mp3')
 
 if __name__ == '__main__':
     app.run()
