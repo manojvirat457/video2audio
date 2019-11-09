@@ -14,9 +14,9 @@ def getFromUrl():
         f = request.files['file']
         if os.path.exists(path_name + f.filename):
             os.remove(path_name + f.filename)
-        f.save(path_name + 'video.mp4')  
+        f.save('video.mp4')  
     
-    return extractAudioFromVideo(path_name + 'video.mp4')
+    return extractAudioFromVideo('video.mp4')
 
 def extractAudioFromVideo(filename):
     save_path = 'results/audio.mp3'
