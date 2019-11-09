@@ -27,4 +27,4 @@ def extractAudioFromVideo(filename):
     return send_file(save_path, attachment_filename='audio.mp3')
 
 if __name__ == '__main__':
-    app.run(host=0.0.0.0)
+    app.run()
